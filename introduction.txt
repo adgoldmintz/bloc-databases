@@ -1,0 +1,69 @@
+__Exercises__
+
+1. What data types do each of these values represent?
+    "A Clockwork Orange" - string  
+    42 - numeric numeric (integer) 
+    09/02/1945 - date (would be stored as "MM-DD-YY")
+    98.7 - numeric (float)
+    $15.99 - numeric (decimal)
+
+2. Explain when a database would be used. Explain when a text file would be used.
+    A database would be used if the user needs to manage the data via an interface, if the data needs to be
+    accessed by multiple applications, and when changes to the data need to persist beyond the end of the 
+    application process.
+    
+    A text file would be used if the data table needs to be easily read by humans and when only a single change
+    needs to be made by one single point of entry one at a time.
+
+3. Describe one difference between SQL and other programming languages.
+    SQL is a declarative rather than a procedural language. This means the user can make the ask to retrieve or manipulate
+    data without having to declare every single step in the process. For example: "get me a pizza" versus providing
+    10 detailed steps on how to order pizza. 
+
+4. In your own words, explain how the pieces of a database system fit together at a high level.
+    A database is basically a series of tables, which are composed of
+    3 elements - columns, rows, and values. A database can have multiple tables that either standalone or can have their
+    data linked.
+
+5. Explain the meaning of table, row, column, and value.
+    A table is comprised of rows and columns, which house the values. Columns are vertical and their headers provide labels indicating
+    what is stored inside. Rows run horizontally underneath the columns - 1 row for every entry. Where the column and row intercept is the value.
+
+6. List three data types that can be used in a table.
+    String, integer, and date are three data types that can be used in a table.
+
+7. Given this payments table, provide an English description of the following queries and include their results:
+
+    A.  SELECT date, amount
+        FROM payments;
+
+    Return the date and amount values from the payments table
+
+    B.  SELECT amount
+        FROM payments
+        WHERE amount > 500;
+
+    Return amounts over 500 from the payments table
+
+    C.  SELECT *
+        FROM payments
+        WHERE payee = 'Mega Foods';
+
+    Return all rows from payee 'Mega Foods' from the payments table
+
+Given this users table, write SQL queries using the following criteria and include the output:
+
+    A. The email and sign-up date for the user named DeAndre Data.
+        SELECT email, sign-up date
+        FROM users
+        WHERE name = 'DeAndre Data';
+
+    B. The user ID for the user with email 'aleesia.algorithm@uw.edu'.
+        SELECT userid
+        FROM users
+        WHERE email = 'aleesia.algorithm@uw.edu';
+
+    C. All the columns for the user ID equal to 4.
+        SELECT * 
+        FROM users
+        WHERE userid = 4;
